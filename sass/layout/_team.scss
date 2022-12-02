@@ -1,0 +1,42 @@
+.team-section {
+    background-color: var(--secondary-bcg-color);
+}
+
+.team-list {
+    --items: 4;
+    background-color: var(--address-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-item-descr {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-item-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19/16);
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.team-item-text {
+    font-size: 16px;
+    line-height: calc(19/16);
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 16px;
+}
+
+.socials-team {
+    justify-content: center;
+}
+
+.socials-link-team {
+    color: var(--icons-color);
+    background-color: var(--main-bcg-color);
+}

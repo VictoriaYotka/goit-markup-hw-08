@@ -1,0 +1,11 @@
+.logo {
+    display: block;
+
+    font-family: var(--logo-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31/26);
+    letter-spacing: 0.03em;
+
+    color: var(--accent-color);
+}

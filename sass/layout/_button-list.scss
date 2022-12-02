@@ -1,0 +1,27 @@
+.button-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.portfolio-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    letter-spacing: 0.03em;
+    background-color: var(--secondary-bcg-color);
+    padding: 6px 22px;
+
+    transition: color var(--duration) var(--timing-function), background-color var(--duration),
+        box-shadow var(--duration);
+
+    &:hover,
+    &:focus {
+        color: var(--address-color);
+        background-color: var(--accent-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
