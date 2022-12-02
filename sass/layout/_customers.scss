@@ -6,8 +6,24 @@
 }
 
 .customers__item {
-    width: 170px;
+    --items: 2;
+
+    width: 210px;
     height: 92px;
+    // tablet
+    @media screen and (min-width: 768px) {
+        --items: 3;
+
+        width: 226px;
+    }
+    
+    // desktop
+    @media screen and (min-width: 1200px) {
+        --items: 6;
+
+        width: 170px;        
+    }
+
 }
 
 .customers__link {
