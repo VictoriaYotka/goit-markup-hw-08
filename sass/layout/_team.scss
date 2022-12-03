@@ -8,6 +8,8 @@
     border-radius: 0px 0px 4px 4px;
     justify-content: center;
 
+    --items: 1;
+
     // tablet
     @media screen and (min-width: 768px) {
         --items: 2;

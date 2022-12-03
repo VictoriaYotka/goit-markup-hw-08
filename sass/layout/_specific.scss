@@ -1,20 +1,15 @@
 
 .specific__item {
-    // mobile
-    @media screen and (min-width: 480px) {
-        --items: 1;
-    }
+    --items: 1;
 
     // tablet
     @media screen and (min-width: 768px) {
         --items: 2;
-        // flex-basis: calc((100% - 30px) / 2);
     }
 
     // desktop
     @media screen and (min-width: 1200px) {
         --items: 4;
-        // flex-basis: calc((100% - 90px) / 4);
     }
 }
 

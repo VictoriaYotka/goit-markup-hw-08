@@ -1,27 +1,21 @@
-.customers__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
 .customers__item {
     --items: 2;
 
-    width: 210px;
+    max-width: 210px;
     height: 92px;
+
     // tablet
     @media screen and (min-width: 768px) {
         --items: 3;
 
-        width: 226px;
+        max-width: 226px;
     }
     
     // desktop
     @media screen and (min-width: 1200px) {
         --items: 6;
 
-        width: 170px;        
+        max-width: 170px;        
     }
 
 }
