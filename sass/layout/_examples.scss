@@ -3,6 +3,21 @@
     padding-left: auto;
 }
 
+.examples-item {
+    --items: 1;
+    
+    // tablet
+    @media screen and (min-width: 768px) {
+        --items: 2;
+    }
+    
+    // desktop
+    @media screen and (min-width: 1200px) {
+        --items: 3;
+    
+    }
+}
+
 .card-set-item {
     transition: box-shadow var(--duration) var(--timing-function);
 

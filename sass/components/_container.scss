@@ -4,13 +4,8 @@
     margin-right: auto;
     margin-left: auto;
     outline: 2px solid red;
-    max-width: 100%;
+    max-width: 480px;
 
-
-    // mobile
-    @media screen and (min-width: 480px) {
-        max-width: 480px;
-    }
     // tablet
     @media screen and (min-width: 768px) {
         max-width: 768px;
