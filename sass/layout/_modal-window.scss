@@ -1,5 +1,6 @@
 .backdrop {
     position: fixed;
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,14 +17,13 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 528px;
+    position: relative;
     min-height: 581px;
-    transform: translate(-50%, -50%);
-
     padding: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 
     background-color: var(--main-bcg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -31,6 +31,25 @@
     border-radius: 4px;
 
     transition: transform 300ms ease-out, opacity 300ms ease-out;
+
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+    }
+
+    // tablet
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    // desktop
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 528px;
+    }
+
 
     .backdrop.is-hidden & {
         transform: translate(-50%, 80%);
@@ -69,10 +88,6 @@
     fill: currentColor;
 }
 
-.modal-form-group {
-    margin-bottom: 20px;
-}
-
 .modal-form-title {
     display: block;
     text-align: center;
@@ -80,18 +95,32 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: calc(23 / 20);
+    line-height: calc(30 / 20);
     letter-spacing: 0.03em;
     color: var(--title-color);
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    // desktop
+    @media screen and (min-width: 1200px) {
+        line-height: calc(23 / 20);
+    }
+}
+
+.modal-form-group {
+    margin-bottom: 20px;
 }
 
 .modal-form-label {
     display: block;
+    margin-bottom: 4px;
+
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
     color: var(--main-text-color);
-    margin-bottom: 4px;
 }
 
 .modal-form-wrapper {
@@ -192,6 +221,7 @@
 
 .modal-form-submit-btn {
     display: block;
+    padding: 10px 52px;
     margin-left: auto;
     margin-right: auto;
 

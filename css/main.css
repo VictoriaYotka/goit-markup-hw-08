@@ -726,6 +726,9 @@ img {
 
 .backdrop {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   left: 0;
   width: 100%;
@@ -742,14 +745,13 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
+  position: relative;
   min-height: 581px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   padding: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   background-color: var(--main-bcg-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -758,6 +760,26 @@ img {
   transition: opacity 300ms ease-out, -webkit-transform 300ms ease-out;
   transition: transform 300ms ease-out, opacity 300ms ease-out;
   transition: transform 300ms ease-out, opacity 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 528px;
+  }
 }
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, 80%);
@@ -794,28 +816,36 @@ img {
   fill: currentColor;
 }
 
-.modal-form-group {
-  margin-bottom: 20px;
-}
-
 .modal-form-title {
   display: block;
   text-align: center;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    line-height: 1.15;
+  }
+}
+
+.modal-form-group {
+  margin-bottom: 20px;
 }
 
 .modal-form-label {
   display: block;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
   color: var(--main-text-color);
-  margin-bottom: 4px;
 }
 
 .modal-form-wrapper {
@@ -920,6 +950,7 @@ img {
 
 .modal-form-submit-btn {
   display: block;
+  padding: 10px 52px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 700;
