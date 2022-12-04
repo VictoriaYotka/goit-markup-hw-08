@@ -303,13 +303,49 @@ img {
 }
 
 .footer-section {
-  display: none;
   background-color: var(--dark-bcg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-address-container {
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-address-container {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .footer-address-container,
 .footer-socials-container {
     margin-bottom: 60px;
@@ -317,9 +353,18 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
+  .footer-socials-container {
+    margin-right: auto;
+  }
+}
+
+.footer-form-container {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
   .footer-form-container {
-    text-align: center;
+    text-align: start;
   }
 }
 
@@ -382,10 +427,6 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-form-container {
-  margin-left: auto;
-}
-
 .footer-form-title {
   font-size: 14px;
   line-height: 1.1428571429;
@@ -396,8 +437,10 @@ img {
 }
 
 .footer-form-input {
-  width: 450px;
-  margin-right: 12px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
   padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
@@ -407,10 +450,19 @@ img {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  width: 100%;
+  max-width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .footer-form-input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-form-input {
     width: 358px;
+    display: inline;
+    margin: 0 12px 0 0;
   }
 }
 
