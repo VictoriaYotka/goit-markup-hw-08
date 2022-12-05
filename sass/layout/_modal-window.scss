@@ -176,11 +176,6 @@
 }
 
 .modal-form-checkbox-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 9px;
-
     margin-bottom: 30px;
 }
 
@@ -205,11 +200,23 @@
 }
 
 .modal-form-checkbox-label {
-    line-height: calc(24 / 14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.03em;
     color: var(--main-text-color);
 
     user-select: none;
+
+    // desktop
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+       line-height: calc(24 / 14); 
+    }  
 }
 
 .modal-form-checkbox-link {
