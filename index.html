@@ -27,10 +27,11 @@
   <header class="header">
     <div class="header-container container">
       <a href="./index.html" class="logo logo-header link">Web<span class="logo-part">Studio</span></a>
+
       <nav class="site-nav">
         <ul class="nav-list list">
           <li>
-            <a href="./index.html" class="nav-link link link-current">Студія</a>
+            <a href="./index.html" class="nav-link link-current link">Студія</a>
           </li>
           <li>
             <a href="./portfolio.html" class="nav-link link">Портфоліо</a>
@@ -39,14 +40,13 @@
             <a href="" class="nav-link link">Контакти</a>
           </li>
         </ul>
-
-        <button class="menu" type="button">
-          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-            <use class="menu__icon-menu" href="./img/icons/icons.svg#icon-menu"></use>
-            <use class="menu__icon-close" href="./img/icons/icons.svg#icon-close"></use>
+        <button class="mob-menu js-open-menu" type="button">
+          <svg class="mob-menu__icon-menu" width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use href="./img/icons/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </nav>
+
       <ul class="contact-list list">
         <li>
           <a href="mailto:info@devstudio.com" class="contact-link link">
@@ -593,8 +593,63 @@
     </div>
   </div>
 
+  <!-- Mobile menu -->
+  <div class="mob-menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+      <svg class="menu-toggle__close" width="40" height="40">
+        <use href="./img/icons/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <ul class="mob-nav-list list">
+      <li class="mob-nav-list__item">
+        <a class="mob-nav-list__link link" href="./index.html">Студія</a>
+      </li>
+      <li class="mob-nav-list__item">
+        <a class="mob-nav-list__link link" href="./portfolio.html">Портфоліо</a>
+      </li>
+      <li class="mob-nav-list__item">
+        <a class="mob-nav-list__link link" href="#">Контакти</a>
+      </li>
+    </ul>
+
+    <ul class="mob-contacts-list list">
+      <li class="mob-contacts-list__item--tel">
+        <a class="mob-contacts-list__link--tel link" href="tel:+380961111111">
+          +38 096 111 11 11
+        </a>
+      </li>
+      <li class="mob-contacts-list__item--mail">
+        <a class="mob-contacts-list__link--mail link" href="mailto:info@devstudio.com">
+          info@devstudio.com
+        </a>
+      </li>
+    </ul>
+    <ul class="mob-socials-list list">
+      <li class="mob-socials-list__item">
+        <a class="mob-socials-list__link link" href="https://www.instagram.com/" target="_blank"
+          rel="noopener norefferer">Instagram</a>
+      </li>
+      <li class="mob-socials-list__item">
+        <a class="mob-socials-list__link link" href="https://twitter.com/" target="_blank"
+          rel="noopener norefferer">Twitter</a>
+      </li>
+      <li class="mob-socials-list__item">
+        <a class="mob-socials-list__link link" href="https://www.facebook.com/" target="_blank"
+          rel="noopener norefferer">Facebook</a>
+      </li>
+      <li class="mob-socials-list__item">
+        <a class="mob-socials-list__link link" href="https://www.linkedin.com/" target="_blank"
+          rel="noopener norefferer">LinkedIn</a>
+      </li>
+    </ul>
+  </div>
+
   <!-- Scripts -->
   <script src="./js/modal.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

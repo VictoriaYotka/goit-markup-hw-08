@@ -1,10 +1,26 @@
 .site-nav {
     margin-right: auto;
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 .nav-list {
     display: flex;
     gap: 50px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .nav-link {
@@ -48,7 +64,7 @@
     }
 }
 
-.menu {
+.mob-menu {
     display: inline-flex;
     margin: 0;
     padding: 0;
@@ -56,7 +72,16 @@
     background-color: transparent;
     cursor: pointer;
 
-    &__icon-close {
+    &__icon-menu {
+        fill: var(--title-color);
+
+        &:hover, &:focus {
+            fill: var(--accent-color);
+        }
+    }
+
+    // tablet and desktop
+    @media screen and (min-width: 768px) {
         display: none;
     }
 }
