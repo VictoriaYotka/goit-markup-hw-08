@@ -485,9 +485,6 @@ img {
 }
 
 .footer-section {
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--dark-bcg-color);
@@ -671,7 +668,6 @@ img {
 }
 
 .hero__section {
-  max-width: 480px;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -691,7 +687,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .hero__section {
-    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero/hero-bgi-tablet@1x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero-bgi-tablet@1x.jpg);
   }
