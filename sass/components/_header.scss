@@ -38,6 +38,7 @@
     @media screen and (min-width: 767px) and (max-width: 1199px) {
         flex-direction: column;
         justify-content: center;
+        align-items: baseline;
         gap: 10px;
     }
 }
@@ -64,6 +65,7 @@
     @media screen and (min-width: 767px) and (max-width: 1199px) {
         padding-top: 0;
         padding-bottom: 0;
+        font-size: 12px;
     }
 }
 

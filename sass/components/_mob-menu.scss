@@ -1,20 +1,25 @@
 .mob-menu-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
+    // max-width: 480px;
     height: 100vh;
-    padding: 32px;
-    background-color: var(--main-bcg-color);
     z-index: 2;
+
+    display: none;
+    flex-direction: column;
+    padding: 32px;
+
+    background-color: var(--main-bcg-color);
+    
     transform: translateX(100%);
+
     transition: transform 250ms ease-in-out;
 }
 
 .mob-menu-container.is-open {
+    display: flex;
     transform: translateX(0);
 }
 
@@ -56,6 +61,10 @@
                 color: var(--accent-color);
             }
     }
+}
+
+.current {
+    color: var(--accent-color);
 }
 
 .mob-contacts-list {
